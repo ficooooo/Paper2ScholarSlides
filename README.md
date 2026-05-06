@@ -9,7 +9,7 @@
 
 ![Project overview](assets/gallery/project-overview.png)
 
-![Slide preview](assets/gallery/snake-robot-demo-overview.png)
+![Slide preview](assets/gallery/snake-robot-demo-overview(2).png)
 
 ![Academic figures](assets/gallery/academic-figures-overview.png)
 
