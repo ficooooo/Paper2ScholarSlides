@@ -22,6 +22,7 @@ REPO_DISPLAY = "Academic Review Decksmith | 学术综述汇报工坊"
 
 
 def git_remote_url() -> str:
+    moved_url = "https://github.com/ficooooo/Paper2ScholarSlides"
     try:
         result = subprocess.run(
             ["git", "-C", str(ROOT), "remote", "get-url", "origin"],
@@ -29,9 +30,12 @@ def git_remote_url() -> str:
             text=True,
             check=True,
         )
-        return result.stdout.strip()
+        url = result.stdout.strip()
+        if "Academic-Review-Decksmith--Turn-Literature-Reviews-into-Rigorous--Citation-Aware-Research-Slides" in url:
+            return moved_url
+        return url.removesuffix(".git")
     except Exception:
-        return "https://github.com/ficooooo/Academic-Review-Decksmith--Turn-Literature-Reviews-into-Rigorous--Citation-Aware-Research-Slides"
+        return moved_url
 
 
 REMOTE_URL = git_remote_url()
