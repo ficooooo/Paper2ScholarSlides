@@ -9,6 +9,10 @@
 
 ![Project overview](assets/gallery/project-overview.png)
 
+![Slide preview](assets/gallery/snake-robot-demo-overview.png)
+
+![Academic figures](assets/gallery/academic-figures-overview.png)
+
 **Academic Review Decksmith** is a reusable Codex skill for turning dense literature reviews into clean, defensible academic slide decks. It was distilled from a real end-to-end workflow: reading core papers, rebuilding the review argument, selecting source figures, redrawing method diagrams, explaining formulas, preserving a university-style PPT template, and exporting slides for visual QA.
 
 It is designed for thesis defenses, journal-club reports, course presentations, research group meetings, and review talks where "pretty slides" are not enough. The deck must be structurally rigorous, traceable to sources, and understandable to an expert audience.
