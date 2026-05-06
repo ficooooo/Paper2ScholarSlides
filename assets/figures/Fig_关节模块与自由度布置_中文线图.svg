@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="496.8pt" height="210.888pt" viewBox="0 0 496.8 210.888" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-05-05T20:21:38.760174</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 210.888 
+L 496.8 210.888 
+L 496.8 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 44.6184 106.46964 
+L 78.9912 106.46964 
+Q 88.812 106.46964 88.812 102.36708 
+L 88.812 83.90556 
+Q 88.812 79.803 78.9912 79.803 
+L 44.6184 79.803 
+Q 34.7976 79.803 34.7976 83.90556 
+L 34.7976 102.36708 
+Q 34.7976 106.46964 44.6184 106.46964 
+z
+" clip-path="url(#pda285ca061)" style="fill: #ffffff; stroke: #0b4d91; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 103.5432 106.46964 
+L 137.916 106.46964 
+Q 147.7368 106.46964 147.7368 102.36708 
+L 147.7368 83.90556 
+Q 147.7368 79.803 137.916 79.803 
+L 103.5432 79.803 
+Q 93.7224 79.803 93.7224 83.90556 
+L 93.7224 102.36708 
+Q 93.7224 106.46964 103.5432 106.46964 
+z
+" clip-path="url(#pda285ca061)" style="fill: #ffffff; stroke: #4c8c6a; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 162.468 106.46964 
+L 196.8408 106.46964 
+Q 206.6616 106.46964 206.6616 102.36708 
+L 206.6616 83.90556 
+Q 206.6616 79.803 196.8408 79.803 
+L 162.468 79.803 
+Q 152.6472 79.803 152.6472 83.90556 
+L 152.6472 102.36708 
+Q 152.6472 106.46964 162.468 106.46964 
+z
+" clip-path="url(#pda285ca061)" style="fill: #ffffff; stroke: #0b4d91; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 221.3928 106.46964 
+L 255.7656 106.46964 
+Q 265.5864 106.46964 265.5864 102.36708 
+L 265.5864 83.90556 
+Q 265.5864 79.803 255.7656 79.803 
+L 221.3928 79.803 
+Q 211.572 79.803 211.572 83.90556 
+L 211.572 102.36708 
+Q 211.572 106.46964 221.3928 106.46964 
+z
+" clip-path="url(#pda285ca061)" style="fill: #ffffff; stroke: #4c8c6a; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 280.3176 106.46964 
+L 314.6904 106.46964 
+Q 324.5112 106.46964 324.5112 102.36708 
+L 324.5112 83.90556 
+Q 324.5112 79.803 314.6904 79.803 
+L 280.3176 79.803 
+Q 270.4968 79.803 270.4968 83.90556 
+L 270.4968 102.36708 
+Q 270.4968 106.46964 280.3176 106.46964 
+z
+" clip-path="url(#pda285ca061)" style="fill: #ffffff; stroke: #0b4d91; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 339.2424 106.46964 
+L 373.6152 106.46964 
+Q 383.436 106.46964 383.436 102.36708 
+L 383.436 83.90556 
+Q 383.436 79.803 373.6152 79.803 
+L 339.2424 79.803 
+Q 329.4216 79.803 329.4216 83.90556 
+L 329.4216 102.36708 
+Q 329.4216 106.46964 339.2424 106.46964 
+z
+" clip-path="url(#pda285ca061)" style="fill: #ffffff; stroke: #4c8c6a; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 398.1672 106.46964 
+L 432.54 106.46964 
+Q 442.3608 106.46964 442.3608 102.36708 
+L 442.3608 83.90556 
+Q 442.3608 79.803 432.54 79.803 
+L 398.1672 79.803 
+Q 388.3464 79.803 388.3464 83.90556 
+L 388.3464 102.36708 
+Q 388.3464 106.46964 398.1672 106.46964 
+z
+" clip-path="url(#pda285ca061)" style="fill: #ffffff; stroke: #0b4d91; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 63.76896 164.93112 
+L 172.77984 164.93112 
+Q 179.6544 164.93112 179.6544 162.059328 
+L 179.6544 130.879872 
+Q 179.6544 128.00808 172.77984 128.00808 
+L 63.76896 128.00808 
+Q 56.8944 128.00808 56.8944 130.879872 
+L 56.8944 162.059328 
+Q 56.8944 164.93112 63.76896 164.93112 
+z
+" clip-path="url(#pda285ca061)" style="fill: #ffffff; stroke: #0b4d91; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 196.34976 164.93112 
+L 305.36064 164.93112 
+Q 312.2352 164.93112 312.2352 162.059328 
+L 312.2352 130.879872 
+Q 312.2352 128.00808 305.36064 128.00808 
+L 196.34976 128.00808 
+Q 189.4752 128.00808 189.4752 130.879872 
+L 189.4752 162.059328 
+Q 189.4752 164.93112 196.34976 164.93112 
+z
+" clip-path="url(#pda285ca061)" style="fill: #ffffff; stroke: #4c8c6a; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 328.93056 164.93112 
+L 437.94144 164.93112 
+Q 444.816 164.93112 444.816 162.059328 
+L 444.816 130.879872 
+Q 444.816 128.00808 437.94144 128.00808 
+L 328.93056 128.00808 
+Q 322.056 128.00808 322.056 130.879872 
+L 322.056 162.059328 
+Q 322.056 164.93112 328.93056 164.93112 
+z
+" clip-path="url(#pda285ca061)" style="fill: #ffffff; stroke: #d58a2a; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 83.9016 93.13632 
+L 98.6328 93.13632 
+" clip-path="url(#pda285ca061)" style="fill: none; stroke: #b8c7d9; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 142.8264 93.13632 
+L 157.5576 93.13632 
+" clip-path="url(#pda285ca061)" style="fill: none; stroke: #b8c7d9; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 201.7512 93.13632 
+L 216.4824 93.13632 
+" clip-path="url(#pda285ca061)" style="fill: none; stroke: #b8c7d9; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 260.676 93.13632 
+L 275.4072 93.13632 
+" clip-path="url(#pda285ca061)" style="fill: none; stroke: #b8c7d9; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 319.6008 93.13632 
+L 334.332 93.13632 
+" clip-path="url(#pda285ca061)" style="fill: none; stroke: #b8c7d9; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 378.5256 93.13632 
+L 393.2568 93.13632 
+" clip-path="url(#pda285ca061)" style="fill: none; stroke: #b8c7d9; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: start; fill: #073763" x="22.5216" y="21.34152" transform="rotate(-0 22.5216 21.34152)">关节模块与偏航/俯仰交替布置</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="61.8048" y="95.47714" transform="rotate(-0 61.8048 95.47714)">J1</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #5e7186" x="61.8048" y="116.877885" transform="rotate(-0 61.8048 116.877885)">偏航</text>
+   </g>
+   <g id="patch_12">
+    <path d="M 48.716361 76.72608 
+Q 61.803271 76.72608 74.890181 76.72608 
+" style="fill: none; stroke: #0b4d91; stroke-linecap: round"/>
+    <path d="M 52.716361 78.72608 
+L 48.716361 76.72608 
+L 52.716361 74.72608 
+" style="fill: none; stroke: #0b4d91; stroke-linecap: round"/>
+    <path d="M 70.890181 74.72608 
+L 74.890181 76.72608 
+L 70.890181 78.72608 
+" style="fill: none; stroke: #0b4d91; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="120.7296" y="95.47714" transform="rotate(-0 120.7296 95.47714)">J2</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #5e7186" x="120.7296" y="116.877885" transform="rotate(-0 120.7296 116.877885)">俯仰</text>
+   </g>
+   <g id="patch_13">
+    <path d="M 150.192 98.224209 
+Q 150.192 93.137684 150.192 88.051159 
+" style="fill: none; stroke: #4c8c6a; stroke-linecap: round"/>
+    <path d="M 152.192 94.224209 
+L 150.192 98.224209 
+L 148.192 94.224209 
+" style="fill: none; stroke: #4c8c6a; stroke-linecap: round"/>
+    <path d="M 148.192 92.051159 
+L 150.192 88.051159 
+L 152.192 92.051159 
+" style="fill: none; stroke: #4c8c6a; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="179.6544" y="95.47714" transform="rotate(-0 179.6544 95.47714)">J3</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #5e7186" x="179.6544" y="116.877885" transform="rotate(-0 179.6544 116.877885)">偏航</text>
+   </g>
+   <g id="patch_14">
+    <path d="M 166.565961 76.72608 
+Q 179.652871 76.72608 192.739781 76.72608 
+" style="fill: none; stroke: #0b4d91; stroke-linecap: round"/>
+    <path d="M 170.565961 78.72608 
+L 166.565961 76.72608 
+L 170.565961 74.72608 
+" style="fill: none; stroke: #0b4d91; stroke-linecap: round"/>
+    <path d="M 188.739781 74.72608 
+L 192.739781 76.72608 
+L 188.739781 78.72608 
+" style="fill: none; stroke: #0b4d91; stroke-linecap: round"/>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="238.5792" y="95.47714" transform="rotate(-0 238.5792 95.47714)">J4</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #5e7186" x="238.5792" y="116.877885" transform="rotate(-0 238.5792 116.877885)">俯仰</text>
+   </g>
+   <g id="patch_15">
+    <path d="M 268.0416 98.224209 
+Q 268.0416 93.137684 268.0416 88.051159 
+" style="fill: none; stroke: #4c8c6a; stroke-linecap: round"/>
+    <path d="M 270.0416 94.224209 
+L 268.0416 98.224209 
+L 266.0416 94.224209 
+" style="fill: none; stroke: #4c8c6a; stroke-linecap: round"/>
+    <path d="M 266.0416 92.051159 
+L 268.0416 88.051159 
+L 270.0416 92.051159 
+" style="fill: none; stroke: #4c8c6a; stroke-linecap: round"/>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="297.504" y="95.47714" transform="rotate(-0 297.504 95.47714)">J5</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #5e7186" x="297.504" y="116.877885" transform="rotate(-0 297.504 116.877885)">偏航</text>
+   </g>
+   <g id="patch_16">
+    <path d="M 284.415561 76.72608 
+Q 297.502471 76.72608 310.589381 76.72608 
+" style="fill: none; stroke: #0b4d91; stroke-linecap: round"/>
+    <path d="M 288.415561 78.72608 
+L 284.415561 76.72608 
+L 288.415561 74.72608 
+" style="fill: none; stroke: #0b4d91; stroke-linecap: round"/>
+    <path d="M 306.589381 74.72608 
+L 310.589381 76.72608 
+L 306.589381 78.72608 
+" style="fill: none; stroke: #0b4d91; stroke-linecap: round"/>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="356.4288" y="95.47714" transform="rotate(-0 356.4288 95.47714)">J6</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #5e7186" x="356.4288" y="116.877885" transform="rotate(-0 356.4288 116.877885)">俯仰</text>
+   </g>
+   <g id="patch_17">
+    <path d="M 385.8912 98.224209 
+Q 385.8912 93.137684 385.8912 88.051159 
+" style="fill: none; stroke: #4c8c6a; stroke-linecap: round"/>
+    <path d="M 387.8912 94.224209 
+L 385.8912 98.224209 
+L 383.8912 94.224209 
+" style="fill: none; stroke: #4c8c6a; stroke-linecap: round"/>
+    <path d="M 383.8912 92.051159 
+L 385.8912 88.051159 
+L 387.8912 92.051159 
+" style="fill: none; stroke: #4c8c6a; stroke-linecap: round"/>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="415.3536" y="95.47714" transform="rotate(-0 415.3536 95.47714)">J7</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #5e7186" x="415.3536" y="116.877885" transform="rotate(-0 415.3536 116.877885)">偏航</text>
+   </g>
+   <g id="patch_18">
+    <path d="M 402.265161 76.72608 
+Q 415.352071 76.72608 428.438981 76.72608 
+" style="fill: none; stroke: #0b4d91; stroke-linecap: round"/>
+    <path d="M 406.265161 78.72608 
+L 402.265161 76.72608 
+L 406.265161 74.72608 
+" style="fill: none; stroke: #0b4d91; stroke-linecap: round"/>
+    <path d="M 424.438981 74.72608 
+L 428.438981 76.72608 
+L 424.438981 78.72608 
+" style="fill: none; stroke: #0b4d91; stroke-linecap: round"/>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="118.2744" y="145.064736" transform="rotate(-0 118.2744 145.064736)">模块尺度</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 7.4px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; fill: #5e7186" transform="translate(81.2744 150.45468)">长度、质量、外壳直径</text>
+    <text style="font-size: 7.4px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; fill: #5e7186" transform="translate(77.5744 159.688493)">决定最小通道与弯曲半径</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="250.8552" y="145.064736" transform="rotate(-0 250.8552 145.064736)">输出能力</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 7.4px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; fill: #5e7186" transform="translate(217.5552 150.45468)">力矩裕度、速度响应</text>
+    <text style="font-size: 7.4px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; fill: #5e7186" transform="translate(217.5552 159.688493)">决定越障与贴壁能力</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="383.436" y="145.064736" transform="rotate(-0 383.436 145.064736)">布线与保护</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 7.4px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; fill: #5e7186" transform="translate(346.436 150.45468)">密封、限位、耐磨外壳</text>
+    <text style="font-size: 7.4px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; fill: #5e7186" transform="translate(350.136 159.688493)">决定长期实验可靠性</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 8.8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #1e2a36" x="248.4" y="191.59776" transform="rotate(-0 248.4 191.59776)">交替布置可获得空间弯曲能力，但会增加逆运动学求解和限位检查的复杂度。</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pda285ca061">
+   <rect x="2.88" y="2.88" width="491.04" height="205.128"/>
+  </clipPath>
+ </defs>
+</svg>

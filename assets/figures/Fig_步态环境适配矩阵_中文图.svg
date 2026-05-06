@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="496.8pt" height="238.608pt" viewBox="0 0 496.8 238.608" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-05-05T20:21:39.239019</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 238.608 
+L 496.8 238.608 
+L 496.8 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 110.9088 91.36224 
+L 167.3784 91.36224 
+L 167.3784 70.825046 
+L 110.9088 70.825046 
+z
+" clip-path="url(#pe14156a357)" style="fill: #2f6f9f; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 172.2888 91.36224 
+L 228.7584 91.36224 
+L 228.7584 70.825046 
+L 172.2888 70.825046 
+z
+" clip-path="url(#pe14156a357)" style="fill: #d8e8f5; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 233.6688 91.36224 
+L 290.1384 91.36224 
+L 290.1384 70.825046 
+L 233.6688 70.825046 
+z
+" clip-path="url(#pe14156a357)" style="fill: #f7f9fc; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 295.0488 91.36224 
+L 351.5184 91.36224 
+L 351.5184 70.825046 
+L 295.0488 70.825046 
+z
+" clip-path="url(#pe14156a357)" style="fill: #f7f9fc; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 356.4288 91.36224 
+L 412.8984 91.36224 
+L 412.8984 70.825046 
+L 356.4288 70.825046 
+z
+" clip-path="url(#pe14156a357)" style="fill: #d8e8f5; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 110.9088 115.81128 
+L 167.3784 115.81128 
+L 167.3784 95.274086 
+L 110.9088 95.274086 
+z
+" clip-path="url(#pe14156a357)" style="fill: #d8e8f5; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 172.2888 115.81128 
+L 228.7584 115.81128 
+L 228.7584 95.274086 
+L 172.2888 95.274086 
+z
+" clip-path="url(#pe14156a357)" style="fill: #2f6f9f; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 233.6688 115.81128 
+L 290.1384 115.81128 
+L 290.1384 95.274086 
+L 233.6688 95.274086 
+z
+" clip-path="url(#pe14156a357)" style="fill: #f7f9fc; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 295.0488 115.81128 
+L 351.5184 115.81128 
+L 351.5184 95.274086 
+L 295.0488 95.274086 
+z
+" clip-path="url(#pe14156a357)" style="fill: #f7f9fc; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 356.4288 115.81128 
+L 412.8984 115.81128 
+L 412.8984 95.274086 
+L 356.4288 95.274086 
+z
+" clip-path="url(#pe14156a357)" style="fill: #d8e8f5; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 110.9088 140.26032 
+L 167.3784 140.26032 
+L 167.3784 119.723126 
+L 110.9088 119.723126 
+z
+" clip-path="url(#pe14156a357)" style="fill: #f7f9fc; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 172.2888 140.26032 
+L 228.7584 140.26032 
+L 228.7584 119.723126 
+L 172.2888 119.723126 
+z
+" clip-path="url(#pe14156a357)" style="fill: #d8e8f5; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 233.6688 140.26032 
+L 290.1384 140.26032 
+L 290.1384 119.723126 
+L 233.6688 119.723126 
+z
+" clip-path="url(#pe14156a357)" style="fill: #2f6f9f; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 295.0488 140.26032 
+L 351.5184 140.26032 
+L 351.5184 119.723126 
+L 295.0488 119.723126 
+z
+" clip-path="url(#pe14156a357)" style="fill: #f7f9fc; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 356.4288 140.26032 
+L 412.8984 140.26032 
+L 412.8984 119.723126 
+L 356.4288 119.723126 
+z
+" clip-path="url(#pe14156a357)" style="fill: #8db7d7; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 110.9088 164.70936 
+L 167.3784 164.70936 
+L 167.3784 144.172166 
+L 110.9088 144.172166 
+z
+" clip-path="url(#pe14156a357)" style="fill: #f7f9fc; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 172.2888 164.70936 
+L 228.7584 164.70936 
+L 228.7584 144.172166 
+L 172.2888 144.172166 
+z
+" clip-path="url(#pe14156a357)" style="fill: #f7f9fc; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 233.6688 164.70936 
+L 290.1384 164.70936 
+L 290.1384 144.172166 
+L 233.6688 144.172166 
+z
+" clip-path="url(#pe14156a357)" style="fill: #f7f9fc; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 295.0488 164.70936 
+L 351.5184 164.70936 
+L 351.5184 144.172166 
+L 295.0488 144.172166 
+z
+" clip-path="url(#pe14156a357)" style="fill: #2f6f9f; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 356.4288 164.70936 
+L 412.8984 164.70936 
+L 412.8984 144.172166 
+L 356.4288 144.172166 
+z
+" clip-path="url(#pe14156a357)" style="fill: #d8e8f5; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 110.9088 189.1584 
+L 167.3784 189.1584 
+L 167.3784 168.621206 
+L 110.9088 168.621206 
+z
+" clip-path="url(#pe14156a357)" style="fill: #d8e8f5; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 172.2888 189.1584 
+L 228.7584 189.1584 
+L 228.7584 168.621206 
+L 172.2888 168.621206 
+z
+" clip-path="url(#pe14156a357)" style="fill: #d8e8f5; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 233.6688 189.1584 
+L 290.1384 189.1584 
+L 290.1384 168.621206 
+L 233.6688 168.621206 
+z
+" clip-path="url(#pe14156a357)" style="fill: #f7f9fc; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 295.0488 189.1584 
+L 351.5184 189.1584 
+L 351.5184 168.621206 
+L 295.0488 168.621206 
+z
+" clip-path="url(#pe14156a357)" style="fill: #f7f9fc; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 356.4288 189.1584 
+L 412.8984 189.1584 
+L 412.8984 168.621206 
+L 356.4288 168.621206 
+z
+" clip-path="url(#pe14156a357)" style="fill: #2f6f9f; stroke: #ffffff; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 412.40736 140.26032 
+L 467.40384 140.26032 
+Q 474.2784 140.26032 474.2784 137.000448 
+L 474.2784 96.950592 
+Q 474.2784 93.69072 467.40384 93.69072 
+L 412.40736 93.69072 
+Q 405.5328 93.69072 405.5328 96.950592 
+L 405.5328 137.000448 
+Q 405.5328 140.26032 412.40736 140.26032 
+z
+" clip-path="url(#pe14156a357)" style="fill: #fff7ed; stroke: #c8102e; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: start; fill: #073763" x="22.5216" y="21.50784" transform="rotate(-0 22.5216 21.50784)">步态与环境条件对应关系</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="141.5988" y="58.638165" transform="rotate(-0 141.5988 58.638165)">平面蜿蜒</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="202.9788" y="58.638165" transform="rotate(-0 202.9788 58.638165)">伸缩运动</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="264.3588" y="58.638165" transform="rotate(-0 264.3588 58.638165)">螺旋贴壁</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="325.7388" y="58.638165" transform="rotate(-0 325.7388 58.638165)">游动推进</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="387.1188" y="58.638165" transform="rotate(-0 387.1188 58.638165)">障碍辅助</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 8.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #1e2a36" x="61.8048" y="81.423462" transform="rotate(-0 61.8048 81.423462)">平面地面</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #ffffff" x="139.1436" y="83.103995" transform="rotate(-0 139.1436 83.103995)">适合</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="200.5236" y="83.103995" transform="rotate(-0 200.5236 83.103995)">可用</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="261.9036" y="83.103995" transform="rotate(-0 261.9036 83.103995)">不适用</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="323.2836" y="83.103995" transform="rotate(-0 323.2836 83.103995)">不适用</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="384.6636" y="83.103995" transform="rotate(-0 384.6636 83.103995)">可用</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 8.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #1e2a36" x="61.8048" y="105.872502" transform="rotate(-0 61.8048 105.872502)">狭窄通道</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="139.1436" y="107.553035" transform="rotate(-0 139.1436 107.553035)">可用</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #ffffff" x="200.5236" y="107.553035" transform="rotate(-0 200.5236 107.553035)">适合</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="261.9036" y="107.553035" transform="rotate(-0 261.9036 107.553035)">不适用</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="323.2836" y="107.553035" transform="rotate(-0 323.2836 107.553035)">不适用</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="384.6636" y="107.553035" transform="rotate(-0 384.6636 107.553035)">可用</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 8.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #1e2a36" x="61.8048" y="130.321542" transform="rotate(-0 61.8048 130.321542)">管道内壁</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="139.1436" y="132.002075" transform="rotate(-0 139.1436 132.002075)">不适用</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="200.5236" y="132.002075" transform="rotate(-0 200.5236 132.002075)">可用</text>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #ffffff" x="261.9036" y="132.002075" transform="rotate(-0 261.9036 132.002075)">适合</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="323.2836" y="132.002075" transform="rotate(-0 323.2836 132.002075)">不适用</text>
+   </g>
+   <g id="text_24">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #ffffff" x="384.6636" y="132.002075" transform="rotate(-0 384.6636 132.002075)">较适合</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 700; font-size: 8.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #1e2a36" x="61.8048" y="154.770582" transform="rotate(-0 61.8048 154.770582)">水下环境</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="139.1436" y="156.451115" transform="rotate(-0 139.1436 156.451115)">不适用</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="200.5236" y="156.451115" transform="rotate(-0 200.5236 156.451115)">不适用</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="261.9036" y="156.451115" transform="rotate(-0 261.9036 156.451115)">不适用</text>
+   </g>
+   <g id="text_29">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #ffffff" x="323.2836" y="156.451115" transform="rotate(-0 323.2836 156.451115)">适合</text>
+   </g>
+   <g id="text_30">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="384.6636" y="156.451115" transform="rotate(-0 384.6636 156.451115)">可用</text>
+   </g>
+   <g id="text_31">
+    <text style="font-weight: 700; font-size: 8.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #1e2a36" x="61.8048" y="179.219622" transform="rotate(-0 61.8048 179.219622)">碎石/障碍</text>
+   </g>
+   <g id="text_32">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="139.1436" y="180.900155" transform="rotate(-0 139.1436 180.900155)">可用</text>
+   </g>
+   <g id="text_33">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="200.5236" y="180.900155" transform="rotate(-0 200.5236 180.900155)">可用</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="261.9036" y="180.900155" transform="rotate(-0 261.9036 180.900155)">不适用</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="323.2836" y="180.900155" transform="rotate(-0 323.2836 180.900155)">不适用</text>
+   </g>
+   <g id="text_36">
+    <text style="font-weight: 700; font-size: 7.3px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #ffffff" x="384.6636" y="180.900155" transform="rotate(-0 384.6636 180.900155)">适合</text>
+   </g>
+   <g id="text_37">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="439.9056" y="114.286824" transform="rotate(-0 439.9056 114.286824)">判断依据</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 7px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; fill: #5e7186" transform="translate(425.9056 118.551095)">是否具备</text>
+    <text style="font-size: 7px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; fill: #5e7186" transform="translate(425.9056 127.285782)">稳定支撑</text>
+    <text style="font-size: 7px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; fill: #5e7186" transform="translate(422.4056 136.02047)">和有效阻力</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 8.6px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #1e2a36" x="248.4" y="217.10016" transform="rotate(-0 248.4 217.10016)">步态选择首先受接触条件约束，其次才由速度、能耗和控制复杂度决定。</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pe14156a357">
+   <rect x="2.88" y="2.88" width="491.04" height="232.848"/>
+  </clipPath>
+ </defs>
+</svg>

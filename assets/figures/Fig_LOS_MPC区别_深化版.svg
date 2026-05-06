@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="496.8pt" height="213.66pt" viewBox="0 0 496.8 213.66" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-05-05T20:21:40.761123</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 213.66 
+L 496.8 213.66 
+L 496.8 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="PathCollection_1">
+    <defs>
+     <path id="mdf94ea2180" d="M 0 2.95804 
+C 0.784481 2.95804 1.536938 2.646362 2.09165 2.09165 
+C 2.646362 1.536938 2.95804 0.784481 2.95804 0 
+C 2.95804 -0.784481 2.646362 -1.536938 2.09165 -2.09165 
+C 1.536938 -2.646362 0.784481 -2.95804 0 -2.95804 
+C -0.784481 -2.95804 -1.536938 -2.646362 -2.09165 -2.09165 
+C -2.646362 -1.536938 -2.95804 -0.784481 -2.95804 0 
+C -2.95804 0.784481 -2.646362 1.536938 -2.09165 2.09165 
+C -1.536938 2.646362 -0.784481 2.95804 0 2.95804 
+z
+" style="stroke: #4c8c6a"/>
+    </defs>
+    <g clip-path="url(#p447f28ba0b)">
+     <use xlink:href="#mdf94ea2180" x="155.1024" y="79.803" style="fill: #4c8c6a; stroke: #4c8c6a"/>
+    </g>
+   </g>
+   <g id="patch_2">
+    <path d="M 317.1456 119.7198 
+C 323.917317 119.7198 330.412594 118.580706 335.200921 116.55339 
+C 339.989248 114.526074 342.67968 111.776058 342.67968 108.909 
+C 342.67968 106.041942 339.989248 103.291926 335.200921 101.26461 
+C 330.412594 99.237294 323.917317 98.0982 317.1456 98.0982 
+C 310.373883 98.0982 303.878606 99.237294 299.090279 101.26461 
+C 294.301952 103.291926 291.61152 106.041942 291.61152 108.909 
+C 291.61152 111.776058 294.301952 114.526074 299.090279 116.55339 
+C 303.878606 118.580706 310.373883 119.7198 317.1456 119.7198 
+z
+" clip-path="url(#p447f28ba0b)" style="fill: #fbe7e7; stroke: #c8102e; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 44.12736 187.911 
+L 153.13824 187.911 
+Q 160.0128 187.911 160.0128 185.0004 
+L 160.0128 155.4786 
+Q 160.0128 152.568 153.13824 152.568 
+L 44.12736 152.568 
+Q 37.2528 152.568 37.2528 155.4786 
+L 37.2528 185.0004 
+Q 37.2528 187.911 44.12736 187.911 
+z
+" clip-path="url(#p447f28ba0b)" style="fill: #ffffff; stroke: #0b4d91; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 196.34976 187.911 
+L 305.36064 187.911 
+Q 312.2352 187.911 312.2352 185.0004 
+L 312.2352 155.4786 
+Q 312.2352 152.568 305.36064 152.568 
+L 196.34976 152.568 
+Q 189.4752 152.568 189.4752 155.4786 
+L 189.4752 185.0004 
+Q 189.4752 187.911 196.34976 187.911 
+z
+" clip-path="url(#p447f28ba0b)" style="fill: #fff7ed; stroke: #c8102e; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 348.57216 187.911 
+L 442.85184 187.911 
+Q 449.7264 187.911 449.7264 185.0004 
+L 449.7264 155.4786 
+Q 449.7264 152.568 442.85184 152.568 
+L 348.57216 152.568 
+Q 341.6976 152.568 341.6976 155.4786 
+L 341.6976 185.0004 
+Q 341.6976 187.911 348.57216 187.911 
+z
+" clip-path="url(#p447f28ba0b)" style="fill: #ffffff; stroke: #d58a2a; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 42.1632 81.882 
+L 66.994387 78.100737 
+L 80.78949 76.240822 
+L 91.825573 74.964697 
+L 102.861656 73.924447 
+L 112.518229 73.235826 
+L 122.174801 72.773084 
+L 131.831374 72.54831 
+L 141.487946 72.567375 
+L 151.144519 72.829782 
+L 160.801092 73.328675 
+L 170.457664 74.051021 
+L 181.493747 75.125718 
+L 192.52983 76.430799 
+L 204.945423 78.118728 
+L 221.499548 80.608093 
+L 255.987307 85.877826 
+L 268.4029 87.538849 
+L 279.438983 88.812524 
+L 290.475066 89.849873 
+L 300.131639 90.535664 
+L 309.788211 90.995379 
+L 319.444784 91.217011 
+L 329.101357 91.194769 
+L 338.757929 90.929233 
+L 348.414502 90.427341 
+L 358.071074 89.702205 
+L 369.107157 88.624668 
+L 380.14324 87.317211 
+L 392.558833 85.627265 
+L 409.112958 83.136428 
+L 443.600717 77.868407 
+L 454.6368 76.382975 
+L 454.6368 76.382975 
+" clip-path="url(#p447f28ba0b)" style="fill: none; stroke-dasharray: 5.365,2.32; stroke-dashoffset: 0; stroke: #5e7186; stroke-width: 1.45"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 42.1632 114.657812 
+L 47.681241 112.866701 
+L 53.199283 111.304436 
+L 58.717324 110.00476 
+L 64.235366 108.995744 
+L 68.373897 108.443089 
+L 72.512428 108.073048 
+L 76.650959 107.89012 
+L 80.78949 107.896529 
+L 84.928021 108.092198 
+L 89.066553 108.474748 
+L 93.205084 109.039526 
+L 97.343615 109.779666 
+L 102.861656 111.023456 
+L 108.379698 112.535905 
+L 113.897739 114.284344 
+L 120.795291 116.743804 
+L 129.072353 119.986263 
+L 155.28305 130.578015 
+L 162.180602 132.99476 
+L 167.698643 134.700325 
+L 173.216685 136.163155 
+L 178.734726 137.351655 
+L 182.873258 138.04732 
+L 187.011789 138.565643 
+L 191.15032 138.900321 
+L 195.288851 139.047286 
+L 199.427382 139.004751 
+L 203.565913 138.773232 
+L 207.704444 138.355545 
+L 211.842975 137.756769 
+L 217.361017 136.689595 
+L 222.879058 135.336721 
+L 228.3971 133.727367 
+L 233.915141 131.896293 
+L 240.812693 129.356295 
+L 249.089755 126.054029 
+L 271.161921 117.084339 
+L 278.059473 114.590327 
+L 283.577514 112.806749 
+L 289.095556 111.253313 
+L 294.613597 109.96357 
+L 300.131639 108.965377 
+L 304.27017 108.421283 
+L 308.408701 108.060068 
+L 312.547232 107.886124 
+L 316.685763 107.901565 
+L 320.824294 108.106205 
+L 324.962825 108.497556 
+L 329.101357 109.070857 
+L 333.239888 109.81914 
+L 338.757929 111.073024 
+L 344.275971 112.594496 
+L 349.794012 114.350693 
+L 356.691564 116.817818 
+L 364.968626 120.066165 
+L 391.179323 130.650803 
+L 398.076875 133.059451 
+L 403.594916 134.756953 
+L 409.112958 136.210496 
+L 414.630999 137.388687 
+L 418.76953 138.076082 
+L 422.908062 138.585785 
+L 427.046593 138.911599 
+L 431.185124 139.049563 
+L 435.323655 138.997998 
+L 439.462186 138.757532 
+L 443.600717 138.331089 
+L 447.739248 137.723854 
+L 453.25729 136.646041 
+L 454.6368 136.331046 
+L 454.6368 136.331046 
+" clip-path="url(#p447f28ba0b)" style="fill: none; stroke: #0b4d91; stroke-width: 2.1; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 317.1456 108.909 
+L 317.1456 96.435 
+" clip-path="url(#p447f28ba0b)" style="fill: none; stroke: #c8102e; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: start; fill: #073763" x="22.5216" y="21.591" transform="rotate(-0 22.5216 21.591)">LOS 制导与 MPC 全身避障的变量差异</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: start; fill: #4c8c6a" x="157.5576" y="68.3685" transform="rotate(-0 157.5576 68.3685)">前视点</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #c8102e" x="317.1456" y="133.857" transform="rotate(-0 317.1456 133.857)">障碍</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: start; fill: #c8102e" x="341.6976" y="99.5535" transform="rotate(-0 341.6976 99.5535)">安全距离</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="98.6328" y="169.030894" transform="rotate(-0 98.6328 169.030894)">LOS</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 7.4px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; fill: #5e7186" transform="translate(57.9328 173.897484)">前视点、路径误差、航向</text>
+    <text style="font-size: 7.4px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; fill: #5e7186" transform="translate(72.7328 183.131297)">侧重参考点跟踪</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="250.8552" y="169.030894" transform="rotate(-0 250.8552 169.030894)">MPC</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 7.4px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; fill: #5e7186" transform="translate(199.0552 173.897484)">身体包络、安全距离、关节限位</text>
+    <text style="font-size: 7.4px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; fill: #5e7186" transform="translate(224.9552 183.131297)">侧重多约束求解</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 9.2px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: middle; fill: #073763" x="395.712" y="169.030894" transform="rotate(-0 395.712 169.030894)">输出</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 7.4px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; fill: #5e7186" transform="translate(380.912 173.897484)">步态参数</text>
+    <text style="font-size: 7.4px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; fill: #5e7186" transform="translate(369.812 183.131297)">或未来关节序列</text>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_4">
+     <path d="M 424.32 13.675 
+L 432.32 13.675 
+L 440.32 13.675 
+" style="fill: none; stroke-dasharray: 5.365,2.32; stroke-dashoffset: 0; stroke: #5e7186; stroke-width: 1.45"/>
+    </g>
+    <g id="text_11">
+     <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: start" x="446.72" y="16.475" transform="rotate(-0 446.72 16.475)">参考路径</text>
+    </g>
+    <g id="line2d_5">
+     <path d="M 424.32 26.05875 
+L 432.32 26.05875 
+L 440.32 26.05875 
+" style="fill: none; stroke: #0b4d91; stroke-width: 2.1; stroke-linecap: square"/>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 8px; font-family: 'Microsoft YaHei', 'SimHei', 'Noto Sans CJK SC', 'Arial', sans-serif; text-anchor: start" x="446.72" y="28.85875" transform="rotate(-0 446.72 28.85875)">身体中心线</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p447f28ba0b">
+   <rect x="2.88" y="2.88" width="491.04" height="207.9"/>
+  </clipPath>
+ </defs>
+</svg>
