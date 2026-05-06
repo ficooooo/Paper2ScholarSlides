@@ -1,28 +1,67 @@
 #!/usr/bin/env python
-"""Generate landscape and portrait posters for the repository."""
+# -*- coding: utf-8 -*-
+"""Generate polished project posters for the repository."""
 
 from __future__ import annotations
 
 import subprocess
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageColor, ImageDraw, ImageFilter, ImageFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-GALLERY = ROOT / "assets" / "gallery"
-POSTERS = ROOT / "assets" / "posters"
+ASSETS = ROOT / "assets"
+GALLERY = ASSETS / "gallery"
+POSTERS = ASSETS / "posters"
 POSTERS.mkdir(parents=True, exist_ok=True)
 
-TITLE_EN = "Academic Review Decksmith"
-TITLE_CN = "学术综述汇报工坊"
-TAGLINE_EN = "Turn scholarly review drafts into citation-aware, presentation-ready research slides."
-TAGLINE_CN = "将综述初稿、论文资料与 PPT 模板转化为结构严谨、图表公式可解释的学术汇报。"
-REPO_DISPLAY = "Academic Review Decksmith | 学术综述汇报工坊"
+REPO_NAME = "Paper2ScholarSlides"
+DEFAULT_URL = "https://github.com/ficooooo/Paper2ScholarSlides"
+INTRO = (
+    "面向学术综述与研究汇报的幻灯片构建技能。它将论文资料、综述初稿与既有模板整理为"
+    "结构清晰、图表来源明确、公式可解释、版式可复核的研究型 PPT 资产，适用于课程汇报、"
+    "组会交流、开题答辩与专题综述展示。"
+)
+CHIPS = ["综述重构", "图表说明", "公式解读", "模板保真", "导出校验"]
+
+FEATURES = [
+    (
+        "结构不是堆章节",
+        "按“背景—问题—方法—建模—控制—应用”重组内容，让综述页序真正服务于讲述逻辑。",
+        "#2B6CB0",
+    ),
+    (
+        "图片必须可追溯",
+        "区分文献原图、重绘示意、原生表格与展示性配图，避免整套幻灯片视觉来源混乱。",
+        "#1F8A70",
+    ),
+    (
+        "公式需要可读性",
+        "关键公式不仅展示，还补充变量、物理含义、适用边界和与图表的对应关系。",
+        "#D97706",
+    ),
+    (
+        "交付前做导出核查",
+        "统一导出 PNG 逐页检查溢出、遮挡、低清晰度、占位文本和引用说明缺失问题。",
+        "#D64550",
+    ),
+]
+
+WORKFLOW = ["资料输入", "论证重构", "图表处理", "PPT 成稿", "导出校验"]
+
+ASSET_LINES = [
+    "SKILL.md：通用综述转汇报规则",
+    "README：项目概览与上手方式",
+    "Gallery：真实 PPT 预览与图件总览",
+    "Posters：横版与竖版项目海报",
+    "Scripts：可重复生成海报与展示图",
+]
+
+USE_CASES = ["课程综述汇报", "课题组组会", "博士生预答辩", "文献综述展示"]
 
 
 def git_remote_url() -> str:
-    moved_url = "https://github.com/ficooooo/Paper2ScholarSlides"
     try:
         result = subprocess.run(
             ["git", "-C", str(ROOT), "remote", "get-url", "origin"],
@@ -30,30 +69,17 @@ def git_remote_url() -> str:
             text=True,
             check=True,
         )
-        url = result.stdout.strip()
-        if "Academic-Review-Decksmith--Turn-Literature-Reviews-into-Rigorous--Citation-Aware-Research-Slides" in url:
-            return moved_url
-        return url.removesuffix(".git")
+        url = result.stdout.strip().removesuffix(".git")
+        if "Paper2ScholarSlides" in url:
+            return "https://github.com/ficooooo/Paper2ScholarSlides"
+        if "Academic-Review-Decksmith" in url:
+            return "https://github.com/ficooooo/Paper2ScholarSlides"
+        return url or DEFAULT_URL
     except Exception:
-        return moved_url
+        return DEFAULT_URL
 
 
-REMOTE_URL = git_remote_url()
-
-BG = "#F4F8FB"
-PANEL = "#FFFFFF"
-NAVY = "#103A5D"
-BLUE = "#2A72B8"
-TEAL = "#2D9C90"
-ORANGE = "#D9771E"
-RED = "#D7263D"
-SLATE = "#5D6B78"
-TEXT = "#1F2A33"
-LINE = "#D7E2EC"
-PALE_BLUE = "#EDF5FC"
-PALE_GREEN = "#EDF9F6"
-PALE_ORANGE = "#FFF6EC"
-PALE_RED = "#FFF0F2"
+REPO_URL = git_remote_url()
 
 
 def load_font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
@@ -61,7 +87,65 @@ def load_font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(path, size)
 
 
-def wrap_text(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFont, max_width: int) -> list[str]:
+def hex_rgba(color: str, alpha: int) -> tuple[int, int, int, int]:
+    r, g, b = ImageColor.getrgb(color)
+    return (r, g, b, alpha)
+
+
+def vertical_gradient(size: tuple[int, int], top: str, bottom: str) -> Image.Image:
+    width, height = size
+    img = Image.new("RGBA", size)
+    top_rgb = ImageColor.getrgb(top)
+    bottom_rgb = ImageColor.getrgb(bottom)
+    pixels = img.load()
+    for y in range(height):
+        ratio = y / max(1, height - 1)
+        color = tuple(int(top_rgb[i] * (1 - ratio) + bottom_rgb[i] * ratio) for i in range(3)) + (255,)
+        for x in range(width):
+            pixels[x, y] = color
+    return img
+
+
+def add_soft_shapes(base: Image.Image) -> None:
+    overlay = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(overlay)
+    w, h = base.size
+    draw.ellipse((w - 700, -160, w + 260, 700), fill=hex_rgba("#8FD3FF", 28))
+    draw.ellipse((-260, h - 520, 480, h + 180), fill=hex_rgba("#CFE5FF", 34))
+    draw.rounded_rectangle((w - 980, h - 250, w - 140, h - 90), radius=72, fill=hex_rgba("#F2F7FF", 180))
+    overlay = overlay.filter(ImageFilter.GaussianBlur(8))
+    base.alpha_composite(overlay)
+
+
+def rounded_panel(
+    base: Image.Image,
+    box: tuple[int, int, int, int],
+    fill: tuple[int, int, int, int] | str = "#FFFFFF",
+    outline: tuple[int, int, int, int] | str = "#D7E4F1",
+    radius: int = 32,
+    shadow: bool = True,
+) -> None:
+    x1, y1, x2, y2 = box
+    if shadow:
+        shadow_img = Image.new("RGBA", base.size, (0, 0, 0, 0))
+        shadow_draw = ImageDraw.Draw(shadow_img)
+        shadow_draw.rounded_rectangle(
+            (x1 + 10, y1 + 14, x2 + 10, y2 + 14),
+            radius=radius,
+            fill=(8, 28, 52, 28),
+        )
+        shadow_img = shadow_img.filter(ImageFilter.GaussianBlur(16))
+        base.alpha_composite(shadow_img)
+    draw = ImageDraw.Draw(base)
+    draw.rounded_rectangle(box, radius=radius, fill=fill, outline=outline, width=2)
+
+
+def wrap_text(
+    draw: ImageDraw.ImageDraw,
+    text: str,
+    font: ImageFont.FreeTypeFont,
+    max_width: int,
+) -> list[str]:
     lines: list[str] = []
     for paragraph in text.split("\n"):
         if not paragraph:
@@ -70,8 +154,8 @@ def wrap_text(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFont
         current = ""
         for ch in paragraph:
             trial = current + ch
-            bbox = draw.textbbox((0, 0), trial, font=font)
-            if bbox[2] - bbox[0] <= max_width or not current:
+            width = draw.textbbox((0, 0), trial, font=font)[2]
+            if width <= max_width or not current:
                 current = trial
             else:
                 lines.append(current)
@@ -81,257 +165,329 @@ def wrap_text(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFont
     return lines
 
 
-def draw_wrapped(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, font, fill: str, max_width: int, line_gap: int = 8):
+def draw_wrapped(
+    draw: ImageDraw.ImageDraw,
+    xy: tuple[int, int],
+    text: str,
+    font: ImageFont.FreeTypeFont,
+    fill: str,
+    max_width: int,
+    line_gap: int = 8,
+) -> int:
     x, y = xy
-    lines = wrap_text(draw, text, font, max_width)
-    h = 0
-    for line in lines:
-        draw.text((x, y + h), line, font=font, fill=fill)
-        bbox = draw.textbbox((x, y + h), line if line else "A", font=font)
-        h += (bbox[3] - bbox[1]) + line_gap
-    return h
+    height = 0
+    for line in wrap_text(draw, text, font, max_width):
+        draw.text((x, y + height), line, font=font, fill=fill)
+        bbox = draw.textbbox((x, y + height), line if line else "A", font=font)
+        height += (bbox[3] - bbox[1]) + line_gap
+    return height
 
 
-def rounded_panel(base: Image.Image, box: tuple[int, int, int, int], fill: str = PANEL, outline: str = LINE, radius: int = 28, shadow: bool = True):
-    x1, y1, x2, y2 = box
-    if shadow:
-        shadow_img = Image.new("RGBA", base.size, (0, 0, 0, 0))
-        shadow_draw = ImageDraw.Draw(shadow_img)
-        shadow_draw.rounded_rectangle((x1 + 8, y1 + 12, x2 + 8, y2 + 12), radius=radius, fill=(10, 42, 78, 24))
-        shadow_img = shadow_img.filter(ImageFilter.GaussianBlur(10))
-        base.alpha_composite(shadow_img)
-    draw = ImageDraw.Draw(base)
-    draw.rounded_rectangle(box, radius=radius, fill=fill, outline=outline, width=2)
+def fit_image(img: Image.Image, target_size: tuple[int, int]) -> Image.Image:
+    target_w, target_h = target_size
+    src_ratio = img.width / img.height
+    target_ratio = target_w / target_h
+    if src_ratio > target_ratio:
+        new_h = target_h
+        new_w = int(target_h * src_ratio)
+    else:
+        new_w = target_w
+        new_h = int(target_w / src_ratio)
+    resized = img.resize((new_w, new_h), Image.Resampling.LANCZOS)
+    left = (new_w - target_w) // 2
+    top = (new_h - target_h) // 2
+    return resized.crop((left, top, left + target_w, top + target_h))
 
 
-def badge(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], text: str, fill: str, color: str = NAVY):
-    draw.rounded_rectangle(box, radius=18, fill=fill, outline=None)
-    font = load_font(24, bold=True)
-    tw = draw.textbbox((0, 0), text, font=font)[2]
-    th = draw.textbbox((0, 0), text, font=font)[3]
-    x1, y1, x2, y2 = box
-    draw.text((x1 + (x2 - x1 - tw) / 2, y1 + (y2 - y1 - th) / 2 - 2), text, font=font, fill=color)
+def sanitize_real_preview() -> Image.Image:
+    img = Image.open(GALLERY / "snake-robot-demo-overview-real.png").convert("RGBA")
+    overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    draw = ImageDraw.Draw(overlay)
+    cols, rows = 3, 9
+    cell_w = img.width / cols
+    cell_h = img.height / rows
+    for row in range(rows):
+        for col in range(cols):
+            x = int(col * cell_w)
+            y = int(row * cell_h)
+            draw.rounded_rectangle(
+                (x + 18, y + 10, x + 118, y + 34),
+                radius=8,
+                fill=(255, 255, 255, 245),
+            )
+            draw.rounded_rectangle(
+                (x + 42, y + 34, x + 188, y + 84),
+                radius=12,
+                fill=(255, 255, 255, 248),
+            )
+            draw.rounded_rectangle(
+                (x + int(cell_w) - 120, y + 36, x + int(cell_w) - 24, y + 66),
+                radius=10,
+                fill=(255, 255, 255, 238),
+            )
+    overlay = overlay.filter(ImageFilter.GaussianBlur(1))
+    img.alpha_composite(overlay)
+    return img
 
 
-def pill_row(draw, start_x, y, labels):
-    x = start_x
-    for text, fill, color in labels:
-        font = load_font(24, bold=True)
-        bbox = draw.textbbox((0, 0), text, font=font)
-        w = bbox[2] - bbox[0] + 42
-        badge(draw, (x, y, x + w, y + 42), text, fill, color)
-        x += w + 16
+def slide_crop_strip() -> Image.Image:
+    preview = sanitize_real_preview()
+    cols, rows = 3, 9
+    cell_w = preview.width // cols
+    cell_h = preview.height // rows
+    picks = [1, 14, 20]
+    crops: list[Image.Image] = []
+    for slide_no in picks:
+        idx = slide_no - 1
+        row = idx // cols
+        col = idx % cols
+        x = col * cell_w
+        y = row * cell_h
+        crop = preview.crop((x + 32, y + 30, x + cell_w - 28, y + cell_h - 30))
+        crops.append(crop)
+    strip = Image.new("RGBA", (1200, 300), (0, 0, 0, 0))
+    x = 0
+    for crop in crops:
+        frame = Image.new("RGBA", (372, 248), (255, 255, 255, 255))
+        fit = fit_image(crop, (348, 224))
+        frame_draw = ImageDraw.Draw(frame)
+        frame_draw.rounded_rectangle((0, 0, 371, 247), radius=24, fill="#FFFFFF", outline="#D6E1EC", width=2)
+        frame.paste(fit, (12, 12))
+        frame = frame.filter(ImageFilter.GaussianBlur(0))
+        strip.alpha_composite(frame, (x, 26))
+        x += 414
+    return strip
 
 
-def feature_card(base: Image.Image, box, title_en, title_cn, body, accent, bg_fill):
-    rounded_panel(base, box, fill=bg_fill, outline=accent, radius=24, shadow=False)
-    draw = ImageDraw.Draw(base)
-    x1, y1, x2, y2 = box
-    draw.rounded_rectangle((x1 + 18, y1 + 18, x1 + 46, y1 + 46), radius=8, fill=accent)
-    draw.text((x1 + 60, y1 + 14), title_en, font=load_font(28, bold=True), fill=NAVY)
-    draw.text((x1 + 60, y1 + 52), title_cn, font=load_font(20, bold=False), fill=SLATE)
-    draw_wrapped(draw, (x1 + 20, y1 + 92), body, load_font(20), TEXT, x2 - x1 - 40, line_gap=6)
+def add_chip_row(draw: ImageDraw.ImageDraw, x: int, y: int, labels: list[str]) -> None:
+    cursor = x
+    font = load_font(22, bold=True)
+    for label in labels:
+        bbox = draw.textbbox((0, 0), label, font=font)
+        width = bbox[2] - bbox[0] + 34
+        draw.rounded_rectangle((cursor, y, cursor + width, y + 42), radius=18, fill="#EDF5FF")
+        draw.text((cursor + 17, y + 8), label, font=font, fill="#133E66")
+        cursor += width + 14
 
 
-def labeled_image_panel(base: Image.Image, box, title, image_path: Path, footer: str):
-    rounded_panel(base, box, fill=PANEL, outline=LINE, radius=28, shadow=True)
-    draw = ImageDraw.Draw(base)
-    x1, y1, x2, y2 = box
-    draw.text((x1 + 22, y1 + 18), title, font=load_font(28, bold=True), fill=NAVY)
-    inner = (x1 + 20, y1 + 68, x2 - 20, y2 - 58)
-    img = Image.open(image_path).convert("RGB")
-    target_w = inner[2] - inner[0]
-    target_h = inner[3] - inner[1]
-    img.thumbnail((target_w, target_h))
-    paste_x = inner[0] + (target_w - img.width) // 2
-    paste_y = inner[1] + (target_h - img.height) // 2
-    base.paste(img, (paste_x, paste_y))
-    draw.text((x1 + 22, y2 - 40), footer, font=load_font(18), fill=SLATE)
-
-
-def workflow_panel(base: Image.Image, box):
-    rounded_panel(base, box, fill=PANEL, outline=LINE, radius=28, shadow=True)
-    draw = ImageDraw.Draw(base)
-    x1, y1, x2, y2 = box
-    draw.text((x1 + 24, y1 + 18), "Workflow | 工作流", font=load_font(30, bold=True), fill=NAVY)
-    labels = [
-        ("Sources", "论文 / 初稿 / 模板", BLUE),
-        ("Map", "图表 / 公式 / 证据", TEAL),
-        ("Argument", "背景 -> 机理 -> 模型 -> 控制", ORANGE),
-        ("Deck", "PPTX 页面 / 原生组件", RED),
-        ("QA", "PNG 导出 / 文本扫描 / 来源检查", NAVY),
-    ]
-    cx = x1 + 28
-    cy = y1 + 98
-    gap = 20
-    bw = (x2 - x1 - 56 - gap * 4) // 5
-    bh = 118
-    for idx, (head, sub, color) in enumerate(labels):
-        bx1 = cx + idx * (bw + gap)
-        bx2 = bx1 + bw
-        rounded_panel(base, (bx1, cy, bx2, cy + bh), fill="#FBFDFF", outline=color, radius=18, shadow=False)
-        draw.text((bx1 + 16, cy + 14), head, font=load_font(24, bold=True), fill=color)
-        draw_wrapped(draw, (bx1 + 16, cy + 52), sub, load_font(18), TEXT, bw - 30, line_gap=4)
-        if idx < len(labels) - 1:
-            ax = bx2 + 6
-            ay = cy + bh // 2
-            draw.line((ax, ay, ax + gap - 10, ay), fill=BLUE, width=5)
-            draw.polygon([(ax + gap - 10, ay), (ax + gap - 24, ay - 8), (ax + gap - 24, ay + 8)], fill=BLUE)
-
-
-def repo_panel(base: Image.Image, box):
-    rounded_panel(base, box, fill=PANEL, outline=LINE, radius=28, shadow=True)
-    draw = ImageDraw.Draw(base)
-    x1, y1, x2, y2 = box
-    draw.text((x1 + 24, y1 + 20), "Repository | 仓库信息", font=load_font(30, bold=True), fill=NAVY)
-    draw.text((x1 + 24, y1 + 78), "Title / 标题", font=load_font(20, bold=True), fill=SLATE)
-    draw_wrapped(draw, (x1 + 24, y1 + 110), REPO_DISPLAY, load_font(26, bold=True), NAVY, x2 - x1 - 48, 6)
-    draw.text((x1 + 24, y1 + 178), "GitHub / 项目地址", font=load_font(20, bold=True), fill=SLATE)
-    draw_wrapped(draw, (x1 + 24, y1 + 210), REMOTE_URL, load_font(15), TEXT, x2 - x1 - 48, 3)
-    draw.text((x1 + 24, y2 - 34), "Codex Skill · PPTX · Figure QA · Formula Notes · Public-safe Assets", font=load_font(18), fill=SLATE)
-
-
-def usecase_panel(base: Image.Image, box):
-    rounded_panel(base, box, fill=PANEL, outline=LINE, radius=28, shadow=True)
+def draw_feature_card(base: Image.Image, box: tuple[int, int, int, int], title: str, body: str, accent: str) -> None:
+    rounded_panel(base, box, fill="#FFFFFF", outline="#D8E4F0", radius=28, shadow=True)
     draw = ImageDraw.Draw(base)
     x1, y1, x2, y2 = box
-    draw.text((x1 + 24, y1 + 18), "Best For | 适用场景", font=load_font(28, bold=True), fill=NAVY)
-    entries = [
-        "课程综述汇报  Course review talks",
-        "实验室组会      Lab seminars",
-        "博士生初审      PhD-level review talks",
-        "学位答辩支持    Thesis defense support",
-        "期刊 Club       Journal-club presentations",
-    ]
-    yy = y1 + 74
-    for idx, text in enumerate(entries):
-        draw.rounded_rectangle((x1 + 24, yy + idx * 50, x1 + 44, yy + 20 + idx * 50), radius=6, fill=[BLUE, TEAL, ORANGE, RED, NAVY][idx % 5])
-        draw.text((x1 + 58, yy - 4 + idx * 50), text, font=load_font(22), fill=TEXT)
+    draw.rounded_rectangle((x1 + 22, y1 + 22, x1 + 54, y1 + 54), radius=10, fill=accent)
+    draw.text((x1 + 70, y1 + 18), title, font=load_font(28, bold=True), fill="#123B61")
+    draw_wrapped(draw, (x1 + 24, y1 + 78), body, load_font(21), "#314252", x2 - x1 - 48, 7)
 
 
-def output_panel(base: Image.Image, box):
-    rounded_panel(base, box, fill=PANEL, outline=LINE, radius=28, shadow=True)
+def draw_preview_panel(
+    base: Image.Image,
+    box: tuple[int, int, int, int],
+    title: str,
+    subtitle: str,
+    image: Image.Image,
+) -> None:
+    rounded_panel(base, box, fill="#FFFFFF", outline="#D8E4F0", radius=34, shadow=True)
     draw = ImageDraw.Draw(base)
     x1, y1, x2, y2 = box
-    draw.text((x1 + 24, y1 + 18), "Outputs | 输出物", font=load_font(28, bold=True), fill=NAVY)
-    lines = [
-        "SKILL.md: 通用综述转汇报规则",
-        "README: 项目介绍与上手方式",
-        "Gallery: 概览图、效果图、图件预览",
-        "Figures: 学术风格自绘图件库",
-        "Template: 公共发布安全版学术模板",
-        "Scripts: 文本扫描、海报生成、概览图生成",
-    ]
-    draw_wrapped(draw, (x1 + 24, y1 + 72), "\n".join(lines), load_font(20), TEXT, x2 - x1 - 48, 8)
+    draw.text((x1 + 28, y1 + 22), title, font=load_font(30, bold=True), fill="#123B61")
+    draw.text((x1 + 28, y1 + 62), subtitle, font=load_font(19), fill="#5C6E80")
+    inner = (x1 + 24, y1 + 108, x2 - 24, y2 - 24)
+    fitted = fit_image(image, (inner[2] - inner[0], inner[3] - inner[1]))
+    mask = Image.new("L", (inner[2] - inner[0], inner[3] - inner[1]), 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, mask.width - 1, mask.height - 1), radius=26, fill=255)
+    base.paste(fitted, (inner[0], inner[1]), mask)
+    shine = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    shine_draw = ImageDraw.Draw(shine)
+    shine_draw.polygon(
+        [
+            (inner[0] + 60, inner[1]),
+            (inner[0] + 240, inner[1]),
+            (inner[0] + 120, inner[3]),
+            (inner[0] - 20, inner[3]),
+        ],
+        fill=(255, 255, 255, 20),
+    )
+    shine = shine.filter(ImageFilter.GaussianBlur(8))
+    base.alpha_composite(shine)
 
 
-def add_header(base: Image.Image, size: tuple[int, int], portrait: bool = False):
+def draw_text_list(
+    draw: ImageDraw.ImageDraw,
+    x: int,
+    y: int,
+    items: list[str],
+    bullet_color: str,
+    font_size: int = 22,
+    line_step: int = 40,
+) -> None:
+    font = load_font(font_size)
+    for idx, item in enumerate(items):
+        yy = y + idx * line_step
+        draw.rounded_rectangle((x, yy + 8, x + 16, yy + 24), radius=5, fill=bullet_color)
+        draw.text((x + 28, yy), item, font=font, fill="#304252")
+
+
+def draw_workflow(base: Image.Image, box: tuple[int, int, int, int]) -> None:
+    rounded_panel(base, box, fill="#FFFFFF", outline="#D8E4F0", radius=28, shadow=True)
     draw = ImageDraw.Draw(base)
-    w, h = size
-    header_h = 300 if not portrait else 310
-    draw.rounded_rectangle((0, 0, w, header_h), radius=0, fill=NAVY)
-    draw.text((90, 48), TITLE_EN, font=load_font(68 if not portrait else 62, bold=True), fill="white")
-    draw.text((90, 126 if not portrait else 120), TITLE_CN, font=load_font(36 if not portrait else 34, bold=True), fill="#DCEBFA")
-    draw_wrapped(draw, (90, 168 if not portrait else 168), TAGLINE_EN, load_font(24), "#EAF3FB", w - 180, 6)
-    draw_wrapped(draw, (90, 202 if not portrait else 220), TAGLINE_CN, load_font(24), "#BFD7EA", w - 180, 6)
-    labels = [
-        ("Codex Skill", PALE_BLUE, NAVY),
-        ("Review-to-Deck", PALE_GREEN, NAVY),
-        ("Citation-aware", PALE_ORANGE, NAVY),
-        ("Formula Notes", PALE_RED, NAVY),
-    ]
-    pill_y = header_h - 56 if not portrait else header_h - 58
-    pill_row(draw, 90, pill_y, labels)
+    x1, y1, x2, y2 = box
+    draw.text((x1 + 24, y1 + 18), "工作流程", font=load_font(28, bold=True), fill="#123B61")
+    total_w = x2 - x1 - 48
+    step_w = 170
+    gap = (total_w - step_w * len(WORKFLOW)) // (len(WORKFLOW) - 1)
+    cy = y1 + 102
+    for idx, label in enumerate(WORKFLOW):
+        bx1 = x1 + 24 + idx * (step_w + gap)
+        bx2 = bx1 + step_w
+        color = ["#2B6CB0", "#1F8A70", "#D97706", "#D64550", "#123B61"][idx]
+        draw.rounded_rectangle((bx1, cy, bx2, cy + 62), radius=18, fill="#F7FAFE", outline=color, width=2)
+        tw = draw.textbbox((0, 0), label, font=load_font(22, bold=True))[2]
+        draw.text((bx1 + (step_w - tw) / 2, cy + 14), label, font=load_font(22, bold=True), fill=color)
+        if idx < len(WORKFLOW) - 1:
+            ax1 = bx2 + 10
+            ax2 = bx2 + gap - 10
+            ay = cy + 31
+            draw.line((ax1, ay, ax2, ay), fill="#7CBAD2", width=5)
+            draw.polygon([(ax2, ay), (ax2 - 14, ay - 8), (ax2 - 14, ay + 8)], fill="#7CBAD2")
 
 
-def build_landscape():
+def draw_asset_panel(base: Image.Image, box: tuple[int, int, int, int]) -> None:
+    rounded_panel(base, box, fill="#FFFFFF", outline="#D8E4F0", radius=28, shadow=True)
+    draw = ImageDraw.Draw(base)
+    x1, y1, x2, y2 = box
+    draw.text((x1 + 24, y1 + 18), "仓库内容", font=load_font(28, bold=True), fill="#123B61")
+    draw_text_list(draw, x1 + 24, y1 + 78, ASSET_LINES, "#2B6CB0", font_size=20, line_step=40)
+
+
+def draw_usecase_panel(base: Image.Image, box: tuple[int, int, int, int]) -> None:
+    rounded_panel(base, box, fill="#FFFFFF", outline="#D8E4F0", radius=28, shadow=True)
+    draw = ImageDraw.Draw(base)
+    x1, y1, x2, y2 = box
+    draw.text((x1 + 24, y1 + 18), "适用场景", font=load_font(28, bold=True), fill="#123B61")
+    draw_text_list(draw, x1 + 24, y1 + 82, USE_CASES, "#1F8A70", font_size=22, line_step=46)
+
+
+def landscape_poster() -> Path:
     size = (2400, 1350)
-    base = Image.new("RGBA", size, BG)
-    add_header(base, size, portrait=False)
-
-    feature_boxes = [
-        (90, 340, 760, 515),
-        (790, 340, 1460, 515),
-        (90, 540, 760, 715),
-        (790, 540, 1460, 715),
-        (90, 740, 760, 915),
-        (790, 740, 1460, 915),
-    ]
-    feature_texts = [
-        ("Rebuild Argument", "重构综述叙事", "从“章节堆叠”转为“问题—机理—结构—模型—控制—应用”的学术讲述顺序。", BLUE, PALE_BLUE),
-        ("Figure Logic", "图件按来源分层", "区分文献原图、重绘图、原生 PPT 组件与公开安全示意图，避免图文混乱。", TEAL, PALE_GREEN),
-        ("Formula Notes", "公式含义直观解释", "关键公式不只展示，还说明变量、物理意义、控制量和工程约束。", ORANGE, PALE_ORANGE),
-        ("Template Fidelity", "模板风格保真", "沿用标题栏、配色、页码、留白与表格语言，同时保持内容可编辑。", RED, PALE_RED),
-        ("Export QA", "导出预览校验", "导出 PNG 联系图检查溢出、遮挡、低对比度、图像压缩和错误占位文本。", BLUE, PALE_BLUE),
-        ("Public-safe Release", "公开发布安全资产", "提供通用模板、项目概览图、海报与图件预览，便于 GitHub 展示与传播。", TEAL, PALE_GREEN),
-    ]
-    for box, data in zip(feature_boxes, feature_texts):
-        feature_card(base, box, *data)
-
-    repo_panel(base, (1500, 340, 2310, 580))
-    labeled_image_panel(base, (1500, 605, 2310, 920), "Workflow Preview | 项目概览", GALLERY / "project-overview.png", "Repo overview banner")
-    labeled_image_panel(base, (1500, 945, 1900, 1270), "Figures | 图件系统", GALLERY / "academic-figures-overview.png", "Academic figure pack")
-    labeled_image_panel(base, (1910, 945, 2310, 1270), "Deck Preview | 效果预览", GALLERY / "snake-robot-demo-overview.png", "Synthetic poster-safe deck overview")
-
-    workflow_panel(base, (90, 950, 1460, 1170))
-    usecase_panel(base, (90, 1190, 670, 1330))
-    output_panel(base, (700, 1190, 1460, 1330))
-
+    base = vertical_gradient(size, "#F5F9FD", "#EDF4FB")
+    add_soft_shapes(base)
     draw = ImageDraw.Draw(base)
-    draw.text((1510, 1292), "GitHub URL", font=load_font(22, bold=True), fill=SLATE)
-    draw_wrapped(draw, (1658, 1290), REMOTE_URL, load_font(15), TEXT, 640, 3)
 
-    out = POSTERS / "academic-review-decksmith-poster-landscape.png"
-    base.convert("RGB").save(out, quality=95)
+    draw.text((100, 82), REPO_NAME, font=load_font(84, bold=True), fill="#0E3658")
+    intro_h = draw_wrapped(draw, (100, 192), INTRO, load_font(26), "#33475A", 860, 8)
+    draw.rounded_rectangle((100, 242 + intro_h, 770, 286 + intro_h), radius=16, fill="#EAF3FF")
+    draw.text((124, 252 + intro_h), REPO_URL, font=load_font(21), fill="#164A75")
+    add_chip_row(draw, 100, 314 + intro_h, CHIPS)
+
+    preview = sanitize_real_preview()
+    draw_preview_panel(
+        base,
+        (980, 72, 2310, 810),
+        "真实 PPT 效果预览",
+        "使用仓库中的真实汇报预览图，并对校徽区域做统一净化处理",
+        preview,
+    )
+
+    y0 = 470
+    card_w, card_h = 400, 182
+    positions = [(100, y0), (530, y0), (100, y0 + 212), (530, y0 + 212)]
+    for (x, y), (title, body, accent) in zip(positions, FEATURES):
+        draw_feature_card(base, (x, y, x + card_w, y + card_h), title, body, accent)
+
+    draw_preview_panel(
+        base,
+        (980, 842, 1680, 1266),
+        "局部页面放大",
+        "从真实预览中截取代表性页面，强调版式与内容密度",
+        slide_crop_strip(),
+    )
+    figure_gallery = Image.open(GALLERY / "academic-figures-overview.png").convert("RGBA")
+    draw_preview_panel(
+        base,
+        (1710, 842, 2310, 1070),
+        "图件资源",
+        "重绘图、控制框图与学术线图可直接复用",
+        figure_gallery,
+    )
+    draw_usecase_panel(base, (1710, 1096, 2310, 1266))
+
+    draw_workflow(base, (100, 1094, 1460, 1266))
+    draw_asset_panel(base, (1490, 1096, 1680, 1266))
+
+    out = POSTERS / "paper2scholarslides-poster-landscape.png"
+    base.convert("RGB").save(out, quality=96)
     return out
 
 
-def build_portrait():
-    size = (1700, 2500)
-    base = Image.new("RGBA", size, BG)
-    add_header(base, size, portrait=True)
-
-    repo_panel(base, (70, 370, 1630, 650))
-    workflow_panel(base, (70, 680, 1630, 920))
-
-    features = [
-        (70, 950, 800, 1155),
-        (830, 950, 1630, 1155),
-        (70, 1180, 800, 1385),
-        (830, 1180, 1630, 1385),
-        (70, 1410, 800, 1615),
-        (830, 1410, 1630, 1615),
-    ]
-    feature_texts = [
-        ("Review-to-Deck", "综述转汇报", "把综述初稿、论文资料和模板转成可讲、可审、可展示的学术汇报页面。", BLUE, PALE_BLUE),
-        ("Citation-aware", "来源感知图件", "每张关键图片都明确其角色：平台证据、方法示意、实验结果或重绘逻辑图。", TEAL, PALE_GREEN),
-        ("Formula Meaning", "公式含义说明", "用短注释解释模型项、控制量、变量关系和使用边界，而不是把公式当装饰。", ORANGE, PALE_ORANGE),
-        ("Editable Layout", "原生组件可编辑", "分类表、流程图、矩阵和标签尽量用 PPT 原生文本框与形状构成。", RED, PALE_RED),
-        ("Visual QA", "可验证的导出检查", "导出预览图逐页审查遮挡、对齐、清晰度和占位文本，减少交付风险。", BLUE, PALE_BLUE),
-        ("Public-safe Assets", "适合公开发布", "提供海报、项目概览、通用模板和图件库，兼顾展示效果与版权风险控制。", TEAL, PALE_GREEN),
-    ]
-    for box, data in zip(features, feature_texts):
-        feature_card(base, box, *data)
-
-    labeled_image_panel(base, (70, 1650, 790, 2070), "Project Overview | 项目概览", GALLERY / "project-overview.png", "Hero banner used in README")
-    labeled_image_panel(base, (830, 1650, 1630, 2070), "Figure Gallery | 图件预览", GALLERY / "academic-figures-overview.png", "Preview of publication-style figures")
-    labeled_image_panel(base, (70, 2095, 1630, 2390), "Deck Preview | 效果图", GALLERY / "snake-robot-demo-overview.png", "Synthetic poster-safe deck overview")
-
+def portrait_poster() -> Path:
+    size = (1800, 2600)
+    base = vertical_gradient(size, "#F5F9FD", "#EDF4FB")
+    add_soft_shapes(base)
     draw = ImageDraw.Draw(base)
-    footer_y = 2410
-    draw.text((70, footer_y), "Repository / 仓库标题", font=load_font(22, bold=True), fill=SLATE)
-    draw.text((330, footer_y), REPO_DISPLAY, font=load_font(22, bold=True), fill=NAVY)
-    draw.text((70, footer_y + 36), "GitHub", font=load_font(22, bold=True), fill=SLATE)
-    draw_wrapped(draw, (170, footer_y + 34), REMOTE_URL, load_font(18), TEXT, 1450, 3)
 
-    out = POSTERS / "academic-review-decksmith-poster-portrait.png"
-    base.convert("RGB").save(out, quality=95)
+    draw.text((90, 88), REPO_NAME, font=load_font(76, bold=True), fill="#0E3658")
+    intro_h = draw_wrapped(draw, (90, 192), INTRO, load_font(28), "#33475A", 1540, 10)
+    draw.rounded_rectangle((90, 228 + intro_h, 980, 276 + intro_h), radius=18, fill="#EAF3FF")
+    draw.text((116, 240 + intro_h), REPO_URL, font=load_font(22), fill="#164A75")
+    add_chip_row(draw, 90, 306 + intro_h, CHIPS)
+
+    preview = sanitize_real_preview()
+    draw_preview_panel(
+        base,
+        (90, 390 + intro_h, 1710, 1500 + intro_h),
+        "真实 PPT 效果预览",
+        "主视觉选用仓库中的真实课程汇报预览图，校徽区域已做净化处理",
+        preview,
+    )
+
+    features_y = 1540 + intro_h
+    card_w, card_h = 760, 182
+    positions = [
+        (90, features_y),
+        (950, features_y),
+        (90, features_y + 212),
+        (950, features_y + 212),
+    ]
+    for (x, y), (title, body, accent) in zip(positions, FEATURES):
+        draw_feature_card(base, (x, y, x + card_w, y + card_h), title, body, accent)
+
+    figure_gallery = Image.open(GALLERY / "academic-figures-overview.png").convert("RGBA")
+    draw_preview_panel(
+        base,
+        (90, features_y + 444, 820, features_y + 864),
+        "图件资源",
+        "用于 README 与报告的学术风格图件预览",
+        figure_gallery,
+    )
+    draw_preview_panel(
+        base,
+        (860, features_y + 444, 1710, features_y + 864),
+        "局部页面放大",
+        "从真实预览中提取代表性页面，展示结构页、建模页与控制页",
+        slide_crop_strip(),
+    )
+
+    footer_y = features_y + 894
+    draw_workflow(base, (90, footer_y, 1710, footer_y + 176))
+    draw_asset_panel(base, (90, footer_y + 204, 1060, footer_y + 394))
+    draw_usecase_panel(base, (1090, footer_y + 204, 1710, footer_y + 394))
+
+    out = POSTERS / "paper2scholarslides-poster-portrait.png"
+    base.convert("RGB").save(out, quality=96)
     return out
 
 
-def main():
-    landscape = build_landscape()
-    portrait = build_portrait()
+def save_sanitized_preview() -> Path:
+    out = GALLERY / "snake-robot-demo-overview-sanitized.png"
+    sanitize_real_preview().convert("RGB").save(out, quality=96)
+    return out
+
+
+def main() -> None:
+    sanitized = save_sanitized_preview()
+    landscape = landscape_poster()
+    portrait = portrait_poster()
+    print(sanitized)
     print(landscape)
     print(portrait)
 
